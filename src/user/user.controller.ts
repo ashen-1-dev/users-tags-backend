@@ -2,11 +2,11 @@ import {Body, Controller, Delete, Get, Param, Post, Put, Req, UseGuards} from "@
 import {AddTagsToUserDto} from "./dto/add-tags-to-user.dto";
 import {UserService} from "./user.service";
 import {EditUserDto, GetUserDto} from "./dto";
-import {JwtAuthGuard} from "../auth";
 import {GetTagDto} from "../tag";
 import {ApiBearerAuth, ApiTags} from "@nestjs/swagger";
 import {Request} from 'express'
 import {User} from "./entities/User";
+import {JwtAuthGuard} from "../core/auth/jwt-auth.guard";
 
 @UseGuards(JwtAuthGuard)
 @ApiBearerAuth()

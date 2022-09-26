@@ -3,11 +3,11 @@ import {PaginatedDto} from "../core/paginate";
 import {TagService} from "./tag.service";
 import {CreateTagDto, GetTagDto, GetTagWithCreatorDto} from "./dto";
 import {TagRequest} from "./tag-request";
-import {JwtAuthGuard} from "../auth";
 import {EditTagDto} from "./edit-tag.dto";
 import {ApiBearerAuth, ApiTags} from "@nestjs/swagger";
 import {Request} from 'express';
 import {User} from "../user/entities/User";
+import {JwtAuthGuard} from "../core/auth/jwt-auth.guard";
 
 
 @Controller('tag')
